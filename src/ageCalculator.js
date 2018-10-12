@@ -11,4 +11,9 @@ export class AgeCalculator {
     let earthAge = Math.floor(lifeSpan / constants.secondsInYear);
     return earthAge;
   }
+
+  mercuryAgeCalculator() {
+  let mercuryAge = Math.floor(this.earthAgeCalculator()/constants.mercuryToEarth);
+  return mercuryAge;
+  }
 }
