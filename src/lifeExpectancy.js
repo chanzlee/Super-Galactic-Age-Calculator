@@ -12,32 +12,32 @@ export class lifeExpectancy {
 
   earthLifeExpectancy(smoking, alcohol, genetics, obesity, relationship) {
     let lifeExpectancy = 78;
-    smoking? lifeExpectancy  -= 8: lifeExpectancy
-    alcohol? lifeExpectancy  -= 6: lifeExpectancy
-    genetics? lifeExpectancy  += 4: lifeExpectancy
-    relationship? lifeExpectancy  += 3: lifeExpectancy
+    smoking? lifeExpectancy  -= 8: lifeExpectancy;
+    alcohol? lifeExpectancy  -= 6: lifeExpectancy;
+    genetics? lifeExpectancy  += 4: lifeExpectancy;
+    relationship? lifeExpectancy  += 3: lifeExpectancy;
     return lifeExpectancy;
   }
 
   getLeftLife(planet, smoking, alcohol, genetics, obesity, relationship) {
-    let earthlifeExpectancy = this.earthLifeExpectancy(smoking, alcohol, genetics, obesity, relationship)
+    let earthlifeExpectancy = this.earthLifeExpectancy(smoking, alcohol, genetics, obesity, relationship);
     let leftLife = 0;
     switch(planet) {
-      case "mercury":
-        leftLife = earthlifeExpectancy/constants.mercuryToEarth - this.mercuryAge;
-        break;
-      case "venus":
-        leftLife = earthlifeExpectancy/ constants.venusToEarth - this.venusAge;
-        break;
-      case "earth":
-        leftLife = earthlifeExpectancy - this.earthAge;
-        break;
-      case "mars":
-        leftLife = earthlifeExpectancy/ constants.marsToEarth - this.marsAge;
-        break;
-      case "jupiter":
-        leftLife = earthlifeExpectancy/ constants.jupiterToEarth - this.jupiterAge;
-        break;
+    case "mercury":
+      leftLife = earthlifeExpectancy/constants.mercuryToEarth - this.mercuryAge;
+      break;
+    case "venus":
+      leftLife = earthlifeExpectancy/ constants.venusToEarth - this.venusAge;
+      break;
+    case "earth":
+      leftLife = earthlifeExpectancy - this.earthAge;
+      break;
+    case "mars":
+      leftLife = earthlifeExpectancy/ constants.marsToEarth - this.marsAge;
+      break;
+    case "jupiter":
+      leftLife = earthlifeExpectancy/ constants.jupiterToEarth - this.jupiterAge;
+      break;
     }
     return Math.floor(leftLife);
   }
