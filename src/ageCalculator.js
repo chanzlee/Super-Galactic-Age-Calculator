@@ -16,4 +16,19 @@ export class AgeCalculator {
   let mercuryAge = Math.floor(this.earthAgeCalculator()/constants.mercuryToEarth);
   return mercuryAge;
   }
+
+  venusAgeCalculator() {
+  let mercuryAge = Math.floor(this.earthAgeCalculator()/constants.venusToEarth);
+  return mercuryAge;
+  }
+
+  marsAgeCalculator() {
+  let mercuryAge = Math.floor(this.earthAgeCalculator()/constants.marsToEarth);
+  return mercuryAge;
+  }
+
+  jupiterAgeCalculator() {
+  let mercuryAge = Math.floor(this.earthAgeCalculator()/constants.jupiterToEarth);
+  return mercuryAge;
+  }
 }
