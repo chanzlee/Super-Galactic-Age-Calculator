@@ -2,9 +2,30 @@
 <html>
   <head>
     <script type="text/javascript" src="bundle.js"></script>
-    <title>GalacticAgeCalculator</title>
+    <title>Super Galatic Age Calculator</title>
   </head>
   <body>
-    <p>GalacticAgeCalculator</p>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Super Galatic Age Calculator</h1>
+      </div>
+
+      <form id="planet-age">
+        <p>Enter birth calculate ages across the planets!</p>
+        <label for="birthday">Date of Birth:</label>
+        <input id="birthDay" type="date" name="birthDay">
+        <button class="btn btn-info" type="submit">Submit</button>
+      </form>
+      <div class="result">
+        <div id="planet-age-result">
+          <h3>Ages in planets</h3>
+          <p>Earth: <span id="earth"></span></p>
+          <p>Mercury: <span id="mercury"></span></p>
+          <p>Venus: <span id="venus"></span></p>
+          <p>Mars: <span id="mars"></span></p>
+          <p>Jupiter: <span id="jupiter"></span></p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
