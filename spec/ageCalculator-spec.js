@@ -13,4 +13,22 @@ describe('AgeCalculator', function() {
     let testAge = testBirthday.mercuryAgeCalculator();
     expect(testAge).toEqual(107);
   });
+
+  it('should test whether venusAgeCalculator returns correct venus Age', function() {
+    let testBirthday = new AgeCalculator("1992-09-27");
+    let testAge = testBirthday.venusAgeCalculator();
+    expect(testAge).toEqual(42);
+  });
+
+  it('should test whether marsAgeCalculator returns correct mars Age', function() {
+    let testBirthday = new AgeCalculator("1992-09-27");
+    let testAge = testBirthday.marsAgeCalculator();
+    expect(testAge).toEqual(13);
+  });
+
+  it('should test whether jupiterAgeCalculator returns correct jupiter Age', function() {
+    let testBirthday = new AgeCalculator("1992-09-27");
+    let testAge = testBirthday.jupiterAgeCalculator();
+    expect(testAge).toEqual(2);
+  });
 });
