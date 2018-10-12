@@ -12,3 +12,4 @@ export const marsToEarth= 1.88;
 export const jupiterToEarth = 11.86;
 
 export const secondsInYear = 31536000;
+export const secondsInDay = 86400;
