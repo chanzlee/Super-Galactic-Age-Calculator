@@ -16,8 +16,7 @@ $(document).ready(function() {
     let genetics = $("#genetics").val();
     let obesity = $("#obesity").val();
     let relationship = $("#relationship").val();
-    let optimisticity = $("#optimisticity").val();
-
+    
     let ageCalcInstance = new AgeCalculator(birthDay);
     let earthAge = ageCalcInstance.earthAgeCalculator();
     let mercuryAge = ageCalcInstance.mercuryAgeCalculator();
@@ -25,11 +24,11 @@ $(document).ready(function() {
     let marsAge = ageCalcInstance.marsAgeCalculator();
     let jupiterAge = ageCalcInstance.jupiterAgeCalculator();
 
-    let earthLeftLife = ageCalcInstance.getLeftLife("earth" smoking, alcohol, genetics, obesity, relationship);
-    let mercuryLeftLife = ageCalcInstance.getLeftLife("mercury" smoking, alcohol, genetics, obesity, relationship);
-    let venusLeftLife = ageCalcInstance.getLeftLife("venus" smoking, alcohol, genetics, obesity, relationship);
-    let marsLeftLife = ageCalcInstance.getLeftLife("mars" smoking, alcohol, genetics, obesity, relationship);
-    let jupiterLeftLife = ageCalcInstance.getLeftLife("jupiter" smoking, alcohol, genetics, obesity, relationship);
+    let earthLeftLife = ageCalcInstance.getLeftLife("earth", smoking, alcohol, genetics, obesity, relationship);
+    let mercuryLeftLife = ageCalcInstance.getLeftLife("mercury", smoking, alcohol, genetics, obesity, relationship);
+    let venusLeftLife = ageCalcInstance.getLeftLife("venus", smoking, alcohol, genetics, obesity, relationship);
+    let marsLeftLife = ageCalcInstance.getLeftLife("mars", smoking, alcohol, genetics, obesity, relationship);
+    let jupiterLeftLife = ageCalcInstance.getLeftLife("jupiter", smoking, alcohol, genetics, obesity, relationship);
 
     $("#earth").text(`${earthAge}`);
     $("#mercury").text(`${mercuryAge}`);

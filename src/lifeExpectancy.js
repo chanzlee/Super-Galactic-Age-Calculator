@@ -10,18 +10,17 @@ export class lifeExpectancy {
     this.jupiterAge = new AgeCalculator(birthDay).jupiterAgeCalculator();
   }
 
-  earthLifeExpectancy(smoking, alcohol, genetics, obesity, relationship, optimisticity) {
+  earthLifeExpectancy(smoking, alcohol, genetics, obesity, relationship) {
     let lifeExpectancy = 78;
     smoking? lifeExpectancy  -= 8: lifeExpectancy
     alcohol? lifeExpectancy  -= 6: lifeExpectancy
     genetics? lifeExpectancy  += 4: lifeExpectancy
     relationship? lifeExpectancy  += 3: lifeExpectancy
-    optimisticity? lifeExpectancy  += 2: lifeExpectancy
     return lifeExpectancy;
   }
 
-  getLeftLife(planet, smoking, alcohol, genetics, obesity, relationship, optimisticity) {
-    let earthlifeExpectancy = this.earthLifeExpectancy(smoking, alcohol, genetics, obesity, relationship, optimisticity)
+  getLeftLife(planet, smoking, alcohol, genetics, obesity, relationship) {
+    let earthlifeExpectancy = this.earthLifeExpectancy(smoking, alcohol, genetics, obesity, relationship)
     let leftLife = 0;
     switch(planet) {
       case "mercury":
