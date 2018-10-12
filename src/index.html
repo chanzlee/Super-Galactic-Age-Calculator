@@ -1,72 +1,94 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
     <script type="text/javascript" src="bundle.js"></script>
     <title>Super Galatic Age Calculator</title>
   </head>
   <body>
     <div class="container">
-      <div class="jumbotron">
+      <div class="jumbotron jumbotron-custom">
         <h1>Super Galatic Age Calculator</h1>
       </div>
 
-      <form id="planet-age">
-        <p>Enter birth calculate ages across the planets!</p>
-        <label for="birthDay">Date of Birth:</label>
-        <input id="birthDay" type="date" name="birthDay">
+      <div class="row">
+        <div class="col-md-6">
+          <form id="planet-age">
+            <p>Enter birth calculate ages across the planets!</p>
+            <label for="birthDay">Date of Birth:</label>
+            <input id="birthDay" type="date" name="birthDay">
 
-        <div class="radio">
-          <p>Are you a heavy smoker?</p>
-          <label class="radio-inline"><input type="radio" name="smoking" checked>Yes</label>
-          <label class="radio-inline"><input type="radio" name="smoking">No</label>
-        <div class="radio">
+            <div class="radio">
+              <p>Are you a heavy smoker?</p>
+              <label class="radio-inline"><input type="radio" name="smoking" checked>Yes</label>
+              <label class="radio-inline"><input type="radio" name="smoking">No</label>
+            </div>
 
-        <div class="radio">
-          <p>Are you a heavy drinker?</p>
-          <label class="radio-inline"><input type="radio" name="alcohol" checked>Yes</label>
-          <label class="radio-inline"><input type="radio" name="alcohol">No</label>
-        <div class="radio">
+            <div class="radio">
+              <p>Are you a heavy drinker?</p>
+              <label class="radio-inline"><input type="radio" name="alcohol" checked>Yes</label>
+              <label class="radio-inline"><input type="radio" name="alcohol">No</label>
+            </div>
 
 
-        <div class="radio">
-          <p>Did your granparents lived over 75?</p>
-          <label class="radio-inline"><input type="radio" name="genetics" checked>Yes</label>
-          <label class="radio-inline"><input type="radio" name="genetics">No</label>
-        <div class="radio">
+            <div class="radio">
+              <p>Did your granparents lived over 75?</p>
+              <label class="radio-inline"><input type="radio" name="genetics" checked>Yes</label>
+              <label class="radio-inline"><input type="radio" name="genetics">No</label>
+            </div>
 
-        <div class="radio">
-          <p>Are you obese?</p>
-          <label class="radio-inline"><input type="radio" name="obesity" checked>Yes</label>
-          <label class="radio-inline"><input type="radio" name="obesity">No</label>
-        <div class="radio">
+            <div class="radio">
+              <p>Are you obese?</p>
+              <label class="radio-inline"><input type="radio" name="obesity" checked>Yes</label>
+              <label class="radio-inline"><input type="radio" name="obesity">No</label>
+            </div>
 
-        <div class="radio">
-          <p>Are you in a good relationship with people?</p>
-          <label class="radio-inline"><input type="radio" name="relationship" checked>Yes</label>
-          <label class="radio-inline"><input type="radio" name="relationship">No</label>
-        <div class="radio">
+            <div class="radio">
+              <p>Are you in a good relationship with people?</p>
+              <label class="radio-inline"><input type="radio" name="relationship" checked>Yes</label>
+              <label class="radio-inline"><input type="radio" name="relationship">No</label>
+            </div>
 
-        <button class="btn btn-info" type="submit">Submit</button>
-      </form>
-      <div class="result">
-        <div id="planet-age-result">
-          <h3>Ages in planets</h3>
-          <p>Earth age: <span id="earth"></span></p>
-          <p>Life Left: <span id="earth-expect"></span> year(s)</p>
-
-          <p>Mercury age : <span id="mercury"></span></p>
-          <p>Life Left: <span id="mercury-expect"></span> year(s)</p>
-
-          <p>Venus age: <span id="venus"></span></p>
-          <p>Life Left: <span id="venus-expect"></span> year(s)</p>
-
-          <p>Mars age: <span id="mars"></span></p>
-          <p>Life Left: <span id="mars-expect"></span> year(s)</p>
-
-          <p>Jupiter age: <span id="jupiter"></span></p>
-          <p>Life Left: <span id="jupiter-expect"></span> year(s)</p>
+            <button class="btn btn-warning" type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div class="result">
+            <div id="planet-age-result">
+              <h3>Ages in planets</h3>
+              <div class="planet-cell">
+                <h3>Earth</h3>
+                <p>Age: <span id="earth"></span></p>
+                <p>Life Left: <span id="earth-expect"></span> year(s)</p>
+                <p>Next birthday: <span id="earth-birth"></span>days later (Earth time)</p>
+              </div>
+              <div class="planet-cell">
+                <h3>Mercury</h3>
+                <p>Age: <span id="mercury"></span></p>
+                <p>Life Left: <span id="mercury-expect"></span> year(s)</p>
+                <p>Next birthday: <span id="mercury-birth"></span>days later (Earth time)</p>
+              </div>
+              <div class="planet-cell">
+                <h3>Venus</h3>
+                <p>Age: <span id="venus"></span></p>
+                <p>Life Left: <span id="venus-expect"></span> year(s)</p>
+                <p>Next birthday: <span id="venus-birth"></span>days later (Earth time)</p>
+              </div>
+              <div class="planet-cell">
+                <h3>Mars</h3>
+                <p>Age: <span id="mars"></span></p>
+                <p>Life Left: <span id="mars-expect"></span> year(s)</p>
+                <p>Next birthday: <span id="mars-birth"></span>days later (Earth time)</p>
+              </div>
+              <div class="planet-cell">
+                <h3>Jupiter</h3>
+                <p>Age: <span id="jupiter"></span></p>
+                <p>Life Left: <span id="jupiter-expect"></span> year(s)</p>
+                <p>Next birthday: <span id="jupiter-birth"></span>days later (Earth time)</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </body>
-</html>
+    </body>
+  </html>
