@@ -1,3 +1,32 @@
+body {
+  background-color: black;
+}
+
+* {
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  border-radius: 10px;
+}
+
+.jumbotron.jumbotron-custom {
+  color: white;
+  background-color: gray;
+}
+
+.planet-cell{
+  margin-bottom: 5%;
+}
+
+input {
+  margin-bottom: 3%;
+}
+
+button {
+  margin-top: 3%;
+  margin-right: 5%;
+  float : right;
+}
+
 .hidden {
   display: none;
 }
