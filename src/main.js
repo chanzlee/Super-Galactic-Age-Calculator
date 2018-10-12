@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import { AgeCalculator } from './ageCalculator.js';
 import { lifeExpectancy } from './lifeExpectancy.js';
+import { NextBirthday } from './nextBirthday.js';
 
 $(document).ready(function() {
   $("#planet-age-result").hide();
@@ -31,6 +32,13 @@ $(document).ready(function() {
     let marsLeftLife = leftLifeInstance.getLeftLife("mars", smoking, alcohol, genetics, obesity, relationship);
     let jupiterLeftLife = leftLifeInstance.getLeftLife("jupiter", smoking, alcohol, genetics, obesity, relationship);
 
+    let dayUntilBirthday = new NextBirthday(birthDay);
+    let earthDaysUntilBirthday = dayUntilBirthday.getNextBirthday("earth");
+    let mercuryDaysUntilBirthday = dayUntilBirthday.getNextBirthday("mercury");
+    let venusDaysUntilBirthday = dayUntilBirthday.getNextBirthday("venus");
+    let marsDaysUntilBirthday = dayUntilBirthday.getNextBirthday("mars");
+    let jupiterDaysUntilBirthday = dayUntilBirthday.getNextBirthday("jupiter");
+
     $("#earth").text(`${earthAge}`);
     $("#mercury").text(`${mercuryAge}`);
     $("#venus").text(`${venusAge}`);
@@ -42,6 +50,12 @@ $(document).ready(function() {
     $("#venus-expect").text(`${venusLeftLife}`);
     $("#mars-expect").text(`${marsLeftLife}`);
     $("#jupiter-expect").text(`${jupiterLeftLife}`);
+
+    $("#earth-birth").text(`${earthDaysUntilBirthday}`);
+    $("#mercury-birth").text(`${mercuryDaysUntilBirthday}`);
+    $("#venus-birth").text(`${venusDaysUntilBirthday}`);
+    $("#mars-birth").text(`${marsDaysUntilBirthday}`);
+    $("#jupiter-birth").text(`${jupiterDaysUntilBirthday}`);
 
     $("#planet-age-result").show();
   });
