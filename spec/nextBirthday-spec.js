@@ -14,4 +14,36 @@ describe('NextBirthday', function() {
     expect(testDayLeft).toEqual(349);
   });
 
+  it('should test whether getNextBirthday returns correct day left in mercury', function() {
+    let testBirthday = new NextBirthday("1992-09-27");
+    let testDayLeft = testBirthday.getNextBirthday("mercury");
+    expect(testDayLeft).toEqual(85);
+  });
+
+  it('should test whether getNextBirthday returns correct day left in venus', function() {
+    let testBirthday = new NextBirthday("1992-09-27");
+    let testDayLeft = testBirthday.getNextBirthday("venus");
+    expect(testDayLeft).toEqual(215);
+  });
+
+  it('should test whether getNextBirthday returns correct day left in earth', function() {
+    let testBirthday = new NextBirthday("1992-09-27");
+    let testDayLeft = testBirthday.getNextBirthday("earth");
+    expect(testDayLeft).toEqual(349);
+  });
+
+
+  it('should test whether getNextBirthday returns correct day left in mars', function() {
+    let testBirthday = new NextBirthday("1992-09-27");
+    let testDayLeft = testBirthday.getNextBirthday("mars");
+    expect(testDayLeft).toEqual(657);
+  });
+
+  it('should test whether getNextBirthday returns correct day left in jupiter', function() {
+    let testBirthday = new NextBirthday("1992-09-27");
+    let testDayLeft = testBirthday.getNextBirthday("jupiter");
+    expect(testDayLeft).toEqual(4140);
+  });
+
+
 });
