@@ -47,12 +47,14 @@ _ChanEthanLee@gmail.com_
 
 ## Technologies Used
 
-* Visual Studio
-* C#/.Net Core 1.1
-* AspNetCore MVC 1.1.3
-* MAMP
-* CSS
-* HTML
+*HTML
+*CSS
+*Bootstrap
+*JavaScript
+*jQuery
+*Jasmine
+*Karma
+*Webpack
 
 #### Licensed under MIT
 
